@@ -1,0 +1,37 @@
+1) get_basemaps.py
+   we get the wms_layers for July or December by putting the corresponding dates
+
+2) save_regions.py
+   we save the customer regions using the previously saved wms_layers (separately run for July and December)
+
+              ----OR instead 1) and 2), we created basemaps for August and December:
+                  f_save_regions.py
+
+
+--------------------------OPTIONAL-------------------------------------
+3) pipeline_process.py
+   put this file together with file 
+   thres_and_brighten_slide.py
+   in the enlightengan repo and run it
+   it will brighten up the images with intensity<0.32 and save them in the same folder that they came from, 
+   so they will be overwritten
+
+4) run HistoGAN and adjust December images to July images
+   images will be saved in .jpg format
+
+5) save_tif_hist_matches.py
+   reshape .jpg images from step 4), and save coregistered tifs according to original July images
+---------------------------OPTIONAL---------------------------------
+
+6) run ChangeOS pipeline.py
+
+7) run filter_preds.py
+to erase contours with less than 10 pixels
+and erase tree contours
+########################################################################################################
+
+TO FIND REMAINING REGIONS:
+
+1) find_missed_regions.py
+
+
